@@ -19,15 +19,20 @@ fetch("https://api.github.com/user")
     //! Error handling
     if (!res.ok) {
       throw new Error("Something went wrong", res.status)
-    }
-    return res.json()
+    } else {
+      return res.json()
+    } 
   })
   .then((data) => {
     // veri = data
     // console.log(veri)
     showUsers(data)
   })
-  .catch((err) => console.log(err))
+  .catch((err) => {
+    console.log(err)
+    const usersDiv = document.getElementById("users")
+    usersDiv.innerHTML = `<h2 class="text-warning">${err}</h2>`
+  })
 
 // console.log(veri)
 
