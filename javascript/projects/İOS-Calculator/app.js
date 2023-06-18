@@ -4,16 +4,19 @@ const bottomScreen = document.querySelector(".bottomScreen");
 const upScreen = document.querySelector(".upScreen");
 const allScreen = document.querySelector(".screen");
 const dote = document.querySelector(".dote");
+
 /* VARIABLES */
 let fNum = 0;
 let sNum = 0;
 let choosedOp = "";
 let result = 0;
+
 /* addEventListener */
 buttons.addEventListener("click", (e) => {
   addToBottom(e);
   operator(e);
 });
+
 /* FUNCTIONS */
 const addToBottom = (e) => {
   // if (!e.target.classList.contains("buttons")) {
@@ -28,10 +31,11 @@ const addToBottom = (e) => {
     bottomScreen.innerText += buttonText;
   }
 };
+
 const operator = (e) => {
   if (e.target.classList.contains("operator")) {
     upScreen.innerText = bottomScreen.innerText;
-    fNum = Number(bottomScreen.innerText.slice(0, -1));
+    fNum = Number(bottomScreen.innerText.slice(0, -1)); // bottom screene girilen sayıyı seçer yani 
     choosedOp = upScreen.innerText[upScreen.innerText.length - 1];
     bottomScreen.innerText = "";
     if (e.target.classList.contains("minus")) {
@@ -52,6 +56,7 @@ const operator = (e) => {
     location.reload();
   }
 };
+
 const calculate = (fNum, sNum, choosedOp) => {
   if (choosedOp === "+") return fNum + sNum;
   else if (choosedOp === "-") return fNum - sNum;
