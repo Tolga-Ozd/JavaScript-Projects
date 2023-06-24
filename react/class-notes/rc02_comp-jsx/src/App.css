@@ -1,0 +1,18 @@
+* {
+margin:0;
+padding: 0;
+box-sizing: border-box;
+}
+
+.content-h4{
+    font-size: 3.5rem;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    padding: 2rem;
+    color: white;
+}
