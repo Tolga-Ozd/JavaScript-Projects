@@ -2,17 +2,23 @@
 margin:0;
 padding: 0;
 box-sizing: border-box;
+text-align: center;
 }
 
-.content-h4{
+h4 { 
     font-size: 3.5rem;
 }
 
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: black;
-    padding: 2rem;
+
+header {
+    padding: 3rem;
+    background-color: rebeccapurple;
     color: white;
 }
+  
+  footer {
+    background-color: black;
+    color: white;
+    padding: 2rem;
+  }
+  
