@@ -7,14 +7,13 @@
 //? sorunsuz calismasini saglanir.
 
 const Events = () => {
-
 let message = "EVENTS"
 
-const handleClick = () =>{
+const handleClick = (e) =>{
     alert ("Hi")
 }
 
-const handleChange = ()=> {
+const handleChange = (e)=> {
     message = "State"
 }
 
@@ -28,7 +27,7 @@ const handleChange = ()=> {
        {/* Eger bir event fonksiyonunun paremetresi olmasi gerekiyorsa
       bu fonksiyon bir arrow fonks. tarafindan  cagrilmalidir. Aksi
       takdirde event fonksiyonu event gerceklesmeden cagirilir */}
-      <button onClick={() => alert("Deneme")}>Save</button>
+    <button onClick={() => alert("Deneme")}>Save</button>
 
     <button onClick={handleChange}>Change</button>
 
