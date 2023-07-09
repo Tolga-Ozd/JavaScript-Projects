@@ -18,19 +18,41 @@
 //?    https://react.dev/reference/react
 //* =============================================================
 
-
+import {useState} from "react"
 
 const UseStateCounter = () => {
-  return
-  <div>
 
+//!count adında bir state tanımlamış olduk. 
+const [count, setCount] = useState(0)
+
+const handleInc = () => {
+  setCount(count + 1)
+}
+
+
+const handleDec = () => {
+
+  if (count <=0){
+    alert("count can not be less than 0")
+  }else {
+    setCount(count -1)
+  }
+}
+
+// const handleClr = () => {
+//   setCount(0)
+// }
+
+  return(
+  <div>
     <h2>Use State Hook</h2>
-    <h1>Count:0</h1>
-    <button>Inc</button>
-    <button>Clr</button>
-    <button>DEc</button>
+    <h1>Count: {count} </h1>
+    <button onClick={handleInc}>Inc</button>
+    <button onDoubleClick={()=> setCount(0)}>Clr</button>
+    <button onClick={handleDec}>Dec</button>
   </div>
-  
+
+ )
 }
 
 export default UseStateCounter
