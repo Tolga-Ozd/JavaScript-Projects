@@ -20,7 +20,7 @@
 
 import {useState} from "react"
 
-const UseStateCounter = () => {
+const UseStateCount er = () => {
 
 //!count adında bir state tanımlamış olduk. 
 const [count, setCount] = useState(0)
