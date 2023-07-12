@@ -4,7 +4,7 @@
 
 import KeyboardClipboard from "./components/2-keybordsClipboard/KeyboardClipboard"
 
-
+import MouseEvents from "./components/3-mouseEvents/MouseEvents"
 
 function App() {
   return (
