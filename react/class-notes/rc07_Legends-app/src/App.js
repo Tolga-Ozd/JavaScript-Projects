@@ -1,8 +1,9 @@
 import { Container } from "react-bootstrap"
 import Header from "./components/Header"
 import ContainerCard from "./components/ContainerCard"
+import "./index.css"
 
-// import PlayerCard from "./components/PlayerCard"
+
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
 
       <ContainerCard />
 
-      {/* <PlayerCard /> */}
+     
 
     </Container>
 
