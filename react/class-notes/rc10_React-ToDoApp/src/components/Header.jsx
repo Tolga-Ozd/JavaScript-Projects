@@ -3,7 +3,13 @@ import React from 'react'
 const Header = () => {
   return (
     <div>
-      Header
+      <h1>Todo App</h1>
+      <div>
+        <form action="#">
+            <input type="" />
+            <button>Add</button>
+        </form>
+      </div>
     </div>
   )
 }
