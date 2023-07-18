@@ -2,7 +2,7 @@ import React from "react"
 import "bulma/css/bulma.css"
 import Course from "./Course"
 import Bootstrap from "./images/bootstrap-5.png"
-import Reactkurs from "./images/react.jpg"
+import Reactkurs from "./images/react2.png"
 import Compleweb from "./images/comple-web.jpg"
 import developer from "./images/developer.jpg"
 
@@ -11,18 +11,19 @@ function App() {
   return (
     <div className="App">
 
-<section class="hero is-link">
-  <div class="hero-body">
-    <p class="title">
-      My Courses
-    </p>
-   
-  </div>
-</section>
+      <section className="hero is-link">
+        <div className="hero-body">
+          <p className="title">
+            My Courses
+          </p>
+        
+        </div>
+      </section>
 
     <div className="container">
-      <div className="columns">
 
+      <section className="section">
+      <div className="columns">
         <div className="column">
           <Course
         image = {Bootstrap} 
@@ -51,6 +52,8 @@ function App() {
           description="While the FrontEnd developer includes content about visual components, he is also responsible for its application in interactions that will increase usability. The front-end developer should have knowledge about testing and debugging, if any. In addition, he should have detailed knowledge and understanding of front-end programming languages."/> 
         </div>
       </div>
+      </section>
+      
     </div>
 
     </div>
