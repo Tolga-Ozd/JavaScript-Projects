@@ -4,7 +4,9 @@ import Developer from "./images/developer.jpg"
 import React2 from "./images/react2.png"
 
 
-function Course() {
+function Course({courseName}) {
+    console.log(Bootstrap)
+    console.log(courseName)
     return (
         <div>
             <img src={Bootstrap} alt="" />
