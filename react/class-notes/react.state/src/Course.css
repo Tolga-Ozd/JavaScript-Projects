@@ -1,0 +1,11 @@
+.course {
+    width: 250px;
+
+}
+
+.courseDiv{
+    margin: 10px;
+    border: 1px solid lightgrey;
+    padding: 10px;
+    border-radius: 5px;
+}
