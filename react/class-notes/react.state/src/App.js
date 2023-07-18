@@ -1,7 +1,12 @@
+import Course from "./Course"
+
+
 function App() {
   return (
     <div className="App">
-      <h1>Hello React</h1>
+      
+      <Course />
+
     </div>
   )
 }
