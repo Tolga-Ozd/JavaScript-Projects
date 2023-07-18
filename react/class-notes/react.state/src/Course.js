@@ -7,7 +7,7 @@ import React2 from "./images/react2.png"
 function Course() {
     return (
         <div>
-
+            <img src={Bootstrap} alt="" />
         </div>
     );
 }
