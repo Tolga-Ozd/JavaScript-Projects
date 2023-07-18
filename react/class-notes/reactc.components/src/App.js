@@ -1,7 +1,14 @@
+import Course from "./Course"
+
 function App() {
   return (
     <div className="App">
-      <h1>React Component</h1>
+      <Course
+      title = "Angular" 
+      description = "lorem10"/>
+      <Course />
+      <Course />
+      <Course /> 
     </div>
   )
 }
