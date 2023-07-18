@@ -6,8 +6,8 @@ const Course = ({image ,title ,description}) => {
 
   return (
     <div>
-        <div>{title}</div>
         <img src={image} alt="" />
+        <div>{title}</div>
         <div>{description}</div>
     </div>
   )
