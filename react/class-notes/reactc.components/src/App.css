@@ -1,3 +1,12 @@
-.title {
+.hero-body {
+    display: flex;
     justify-content: center;
+    
+}
+.card-image:first-child img{
+    height: 150px;
+}
+
+.card-image:first-child img:hover{
+    opacity: 0.85;
 }
