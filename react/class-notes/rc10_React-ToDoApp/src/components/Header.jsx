@@ -1,41 +1,51 @@
 import React, { useState } from 'react'
-import {as as 2017} from as;
+import {Button, Form , InputGroup} from "react-bootstrap"
 
-const Header = ({setTodos , todos}) => {
+const Header = ({todos , setTodos}) => {
 
-    const [task , setTask] = useState({
-        id: "" ,
-        text: "" ,
-    })
+    const [task , setTask] = useState("")
 
-    const handleSubmit = (e)=> {
-        e.preventDefault()
-        setTodos([...todos , task])
-        setTask({
-            id:"",
-            text:""
-        })
-    }
+    const addTodo = ()=>{
+        console.log(task)
+        setTask =("")
+      }
+    
 
-    const handleInput = (e) =>{
-        setTask({
-            id: as2017(),
-            text: e.target.value,
-            cheched:false
-        })
-    }
+    // const handleSubmit = (e)=> {
+    //     e.preventDefault()
+    //     setTodos([...todos , task])
+    //     setTask({
+    //         id:"",
+    //         text:""
+    //     })
+    // }
 
-  return (
-    <div className='container text-center mt-5'>
-      <h1 className='text-danger'>Todo App</h1>
-      <div className='row justify-content-center mt-3'>
-        <form onSubmit={handleSubmit} action="#" className='d-flex w-50 '>
-            <input onChange={handleInput} type="text"  className='form-control' value={task.text}  required/>
-            <button type='submit' className='btn btn-primary ms-1'>Add</button>
-        </form>
-      </div>
+    // const handleInput = (e) =>{
+    //     setTask({
+    //         // id: as2017(),
+    //         text: e.target.value,
+    //         cheched:false
+    //     })
+    // }
+
+    return (
+    <div>
+      <h1 className='text-danger text-center m-5'>React Todo App</h1>
+      <InputGroup className='mb-3 w-50 d-flex mx-auto'>
+          <Form.Control
+          placeholder ="Enter new todo.."
+          aria-label ="Recipient's username"
+          aria-describedby ="basic-addon2"
+          value = {task}
+          onChange ={(e)=>setTask(e.target.value)}
+          />
+                
+        <Button className='input-group-text bg-success' id=" basic-addon2" onClick={addTodo}>Add</Button>
+      </InputGroup>
+       
     </div>
   )
-}
+  
+  }
 
 export default Header
