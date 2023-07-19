@@ -13,8 +13,8 @@ const Header = ({todos , setTodos}) => {
           text:task,
           completed:false
         }
-        console.log(newTodo)
-        setTodos([...todos , newTodo])
+    
+        setTodos([...todos ,newTodo])
         setTask ("")
       }
 
@@ -30,11 +30,11 @@ const Header = ({todos , setTodos}) => {
           onChange ={(e)=>setTask(e.target.value)}
           />
                 
-        <Button className='input-group-text bg-success' disabled={!task.trim()} id=" basic-addon2" onClick={addTodo}>Add</Button>
+        <Button className='input-group-text bg-success' disabled={!task.trim()} id=" basic-addon2" onClick={addTodo}>Add Todo</Button>
       </InputGroup>
        
     </div>
-  )
+  );
   
   }
 

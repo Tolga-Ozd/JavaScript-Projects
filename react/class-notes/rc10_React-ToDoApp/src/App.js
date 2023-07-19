@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="container" >
       
-    <Header  todos={todos} />
+    <Header  todos={todos} setTodos={setTodos}/>
 
     <TodoList  todos={todos} setTodos={setTodos}/>
 
