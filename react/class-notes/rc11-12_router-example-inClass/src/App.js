@@ -4,15 +4,20 @@ import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import People from "./pages/People";
 import NotFound from "./pages/NotFound";
+import Paths from "./pages/page"
 
 function App() {
   return (
     <>
       <Nav />
-      <Home />
-      <People />
-      <Contact />
-      <NotFound />
+      <Routes>
+       <Route path = "/" element ={<Home />}  />
+       <Route path = "/" element ={<Path />}  />
+        <People />
+        <Contact />
+        <NotFound />
+      </Routes>
+     
       <Footer />
     </>
   );
