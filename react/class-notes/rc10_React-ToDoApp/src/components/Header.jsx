@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import {Button, Form , InputGroup} from "react-bootstrap"
+import {Button, Form , InputGroup} from "react-bootstrap";
+import { v4 as uuidv4 } from 'uuid';
 
 const Header = ({todos , setTodos}) => {
 
@@ -7,7 +8,14 @@ const Header = ({todos , setTodos}) => {
 
     const addTodo = ()=>{
         console.log(task)
-        setTask =("")
+        const newTodo = {
+          id:uuidv4(),
+          text:task,
+          completed:false
+        }
+        console.log(newTodo)
+        setTodos([...todos , newTodo])
+        setTask ("")
       }
     
 
@@ -40,7 +48,7 @@ const Header = ({todos , setTodos}) => {
           onChange ={(e)=>setTask(e.target.value)}
           />
                 
-        <Button className='input-group-text bg-success' id=" basic-addon2" onClick={addTodo}>Add</Button>
+        <Button className='input-group-text bg-success' disabled={!task.trim()} id=" basic-addon2" onClick={addTodo}>Add</Button>
       </InputGroup>
        
     </div>
