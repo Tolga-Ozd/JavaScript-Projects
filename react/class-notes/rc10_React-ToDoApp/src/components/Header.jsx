@@ -17,24 +17,6 @@ const Header = ({todos , setTodos}) => {
         setTodos([...todos , newTodo])
         setTask ("")
       }
-    
-
-    // const handleSubmit = (e)=> {
-    //     e.preventDefault()
-    //     setTodos([...todos , task])
-    //     setTask({
-    //         id:"",
-    //         text:""
-    //     })
-    // }
-
-    // const handleInput = (e) =>{
-    //     setTask({
-    //         // id: as2017(),
-    //         text: e.target.value,
-    //         cheched:false
-    //     })
-    // }
 
     return (
     <div>
