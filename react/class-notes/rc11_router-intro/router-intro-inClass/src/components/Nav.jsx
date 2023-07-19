@@ -1,14 +1,21 @@
+import {Link} from "react-router-dom"
+
+
 const Nav = () => {
   return (
     <ul className="bg-warning">
       <li>
-        <a href="/">Home</a>
+        <Link to="/">Home</Link>
       </li>
       <li>
-        <a href="/instructors">Instructors</a>
+        {/* <NavLink style ={(isActive)=>({color: isActive && "red"})}>Instructors</NavLink> */}
+        {/* navlink ile active class ı ekleniyor */}
+
+        {/* <NavLink to = "/instructors" >Instructors </NavLink> */}
+
       </li>
       <li>
-        <a href="/contact">Contact</a>
+        <Link to="/contact">Contact</Link>
       </li>
     </ul>
   );
