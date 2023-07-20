@@ -8,7 +8,7 @@ import NotFound from "./pages/NotFound";
 import {BrowserRouter, Route , Routes} from "react-router-dom"
 
 function App() {
-  return (
+  return ( 
     <BrowserRouter>
       <Nav />
         <Routes>

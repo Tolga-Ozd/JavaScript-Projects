@@ -1,15 +1,19 @@
-import {Link} from "react-router-dom"
+import {useParams} from "react-router-dom"
 
 const InstructorDetail = () => {
+
+  //  let param = useParams();
+  //* Linkteki parametreyi almak icin useParams Hook'u kullanilabilir.
+  //* yakalanan id'ye ait güncel veriler fetch yapılabilir
+
+  let {id} = useParams();
+
   return (
     <div className="p-3">
-      <h1>Instructor Detail</h1>
-      <div className="d-flex flex-column">
-        {/* <Link to = {"/instructors/1"}>Instructors-1</Link> */}
-        <Link to = {"1"}>Instructors-1</Link>
-        <Link to = {"2"}>Instructors-2</Link>
-        <Link to = {"3"}>Instructors-3</Link>
-      </div>
+      <p>
+        from useParam : I am instructors {" "}
+        <span className="text-danger fw-bolder">{id}</span>
+      </p>
     </div>
   );
 };
