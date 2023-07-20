@@ -1,9 +1,9 @@
 import {Link} from "react-router-dom"
 
-const Instructors = () => {
+const InstructorDetail = () => {
   return (
     <div className="p-3">
-      <h1>Instructors</h1>
+      <h1>Instructor Detail</h1>
       <div className="d-flex flex-column">
         {/* <Link to = {"/instructors/1"}>Instructors-1</Link> */}
         <Link to = {"1"}>Instructors-1</Link>
@@ -14,4 +14,4 @@ const Instructors = () => {
   );
 };
 
-export default Instructors;
+export default InstructorDetail;
