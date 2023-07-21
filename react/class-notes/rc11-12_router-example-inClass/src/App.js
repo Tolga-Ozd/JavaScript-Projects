@@ -14,6 +14,7 @@ function App() {
   return (
     <>
       <AppRouter />
+      
       {/* //?router yapısını ayrı bir component haline getirip router dosyasına taşıdık */}
       {/* <Nav />
       <Routes>
