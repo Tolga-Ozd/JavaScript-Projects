@@ -5,8 +5,10 @@ import NotFound from "./NotFound";
 import Spinner from "../img/Spinner.gif"
 
 const PersonDetail = () => {
+  //! navigate ile gonderilen state'i yakalamak icin useLocation Hook'u kullanilabilir.
+  //! Bu durumda veri, state ile geldigi icin yeniden fetch yapilmasina gerek kalmaz
 //   let { state: person } = useLocation();
-  let navigate = useNavigate();
+let navigate = useNavigate();
 //   console.log(person);
 let {id}= useParams();
 console.log({id})
