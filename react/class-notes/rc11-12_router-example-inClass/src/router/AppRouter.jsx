@@ -17,7 +17,8 @@ const AppRouter = () => {
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/paths" element={<Paths />}>
+        <Route path="/paths" element={<Paths />} >
+            <Route index element = {<FullStack />} />
             <Route path ="fullstack" element = {<FullStack />} />
             <Route path ="aws" element = {<Aws/>} />
         </Route>
