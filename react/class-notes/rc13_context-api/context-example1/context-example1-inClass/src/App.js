@@ -9,8 +9,10 @@ import Login from "./pages/Login";
 import { LoginContext } from "./context/LoginContext";
 
 function App() {
+  const [user, setUser] = useState({ email: "", password: "" });
+
   return (
-    <LoginContext.Provider value={{}}>
+    <LoginContext.Provider value={{ user ,setUser }}>
     <BrowserRouter>
       <Navs />
 
