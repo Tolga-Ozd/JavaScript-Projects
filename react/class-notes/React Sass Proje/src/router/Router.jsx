@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
-
+import  {Routes , Route} from "react-router-dom"
 import Home from "../pages/home/Home";
 import About from "../pages/about/About";
 import Projects from "../pages/projects/Projects";
@@ -12,10 +12,15 @@ const Router = () => {
     <div className="home-bgImg-container">
       <Navbar />
 
-      <Home />
-      <About />
-      <Projects />
-      <Contact />
+      <Routes>
+      <Route path="/" element = {<Home />} />
+      <Route path="/aboute" element = {<About />} />
+      <Route path="/project" element = {<Projects />} />
+      <Route path="/contact" element = {<Contact />} />
+        <About />
+        
+        
+      </Routes>
 
       <Footer />
     </div>
