@@ -1,46 +1,57 @@
-import Button from 'react-bootstrap/Button';
+import Button from "react-bootstrap/Button";
 import axios from "axios";
-import { useState } from 'react';
-import { useEffect } from 'react';
+import { useEffect, useState } from "react";
 
+const Header = ({ setData,data }) => {
+  const renkli = ["info", "danger", "success", "warning"];
+  const [categories, setCategories] = useState();
 
-const Header = () => {
-    const getCategories =()=>{
-        
-        const renkli =[
-            "secondary",
-            
-        ]
+  const getCategories = () => {
+    const C_URL = "https://fakestoreapi.com/products/categories";
+    axios
+      .get(C_URL)
+      .then((res) => setCategories(res.data))
+      .catch((err) => console.log(err));
+  };
+  useEffect(() => {
+    getCategories();
+    getData();
+  }, []);
 
-        const [categories , setCategories] = useState();
+  const getData = async () => {
+    const C_URL = " https://fakestoreapi.com/products ";
+    try {
+      const { data } = await axios.get(C_URL);
 
-        const C_URL ="https://fakestoreapi.com/products/categories";
-        axios.get(C_URL).then((res)=>setCategories(res.data));
-    };
-
-    useEffect(()=>{
-        getCategories()
-    } , []);
-
-    
-
+      setData(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const handleFilter = (item) => {
+    console.log(item);
+    setData(data.filter)((urun)=>urun.category === item)
+  };
   return (
-    <div>
-      <h1> Product List</h1>
-      <div>
-      <Button variant="primary">ALL</Button>{' '}
-     
-
-        {categories.map((item)=>{
-            return(
-                <Button variant="secondary">{item.toUpperCase()}</Button>
-            
-            )
+    <div className="text-center ">
+      <h1>Product List</h1>
+      <div className="d-flex flex-wrap align-items-center justify-content-center  gap-2">
+        <Button variant="primary">ALL</Button>{" "}
+        {categories?.map((item, i) => {
+          return (
+            <Button
+              name={item}
+              onClick={() => handleFilter(item)}
+              className=""
+              variant={renkli[i]}
+            >
+              {item.toUpperCase()}
+            </Button>
+          );
         })}
-
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
