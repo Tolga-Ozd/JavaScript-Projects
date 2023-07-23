@@ -45,6 +45,7 @@ const Form = () => {
                 <label htmlFor="email" className="form-label">Email address: <span className="text-danger">{email}</span></label>
                 <input type="email" className="form-control" id="email" aria-describedby="emailHelp" 
                 onChange={(e) =>setEmail(e.target.value)}
+                // üstte emaili inputun üstüne yazdırdık!
                 value={email}
                 />
                
