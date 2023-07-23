@@ -20,7 +20,7 @@
 
 import {useState} from "react"
 
-const UseStateCount er = () => {
+const UseStateCounter = () => {
 
 //!count adında bir state tanımlamış olduk. 
 const [count, setCount] = useState(0)
@@ -28,7 +28,6 @@ const [count, setCount] = useState(0)
 const handleInc = () => {
   setCount(count + 1)
 }
-
 
 const handleDec = () => {
 
@@ -38,10 +37,6 @@ const handleDec = () => {
     setCount(count -1)
   }
 }
-
-// const handleClr = () => {
-//   setCount(0)
-// }
 
   return(
   <div>
