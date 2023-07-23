@@ -2,7 +2,7 @@
 
 // import FormObject from "./components/1-forms/FormObject"
 
-import KeyboardClipboard from "./components/2-keybordsClipboard/KeyboardClipboard"
+// import KeyboardClipboard from "./components/2-keybordsClipboard/KeyboardClipboard"
 
 import MouseEvents from "./components/3-mouseEvents/MouseEvents"
 

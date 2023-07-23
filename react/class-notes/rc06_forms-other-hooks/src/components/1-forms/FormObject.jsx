@@ -9,6 +9,7 @@ const FormObject = () => {
         password:"",
     })
 
+
     // destructuring
     const {username ,email , password } = formData
 
