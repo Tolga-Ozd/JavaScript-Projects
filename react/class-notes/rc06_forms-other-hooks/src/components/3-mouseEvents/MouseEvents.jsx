@@ -1,7 +1,8 @@
 import { useState } from "react"
 
 const MouseEvent = () => {
-  const [visible, setVisible] = useState(false)
+  
+  const [visible, setVisible] = useState(false)  
 
   const [coordX, setCoordX] = useState()
   const [coordY, setCoordY] = useState()
@@ -32,6 +33,9 @@ const MouseEvent = () => {
 
       {/* Conditional Rendering */}
       {visible && <div>Hint</div>}
+      {/* visible true ise hinti göster demek */}
+
+
 
       <div id="todo-2" className="bg-success text-light w-50 p-4 mt-4">
         todo item 2
