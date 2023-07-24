@@ -9,7 +9,7 @@ function AddModal({ show, handleClose, apps, setApps, drName }) {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    setApps([
+    setApps([ 
       ...apps,
       {
         id: new Date().getTime(),
