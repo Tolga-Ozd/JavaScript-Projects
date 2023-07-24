@@ -4,7 +4,7 @@ import { Button } from "./components/Buton.styled";
 const App = () => {
   return (
     <>
-     <Flex>
+     <Flex bg = "#bebe">
 
        <h1>Styled Components</h1>
 
