@@ -1,16 +1,17 @@
-
 import { useState } from "react"
 
 const MouseEvent = () => {
-  
-  const [visible ,setVisible] = useState(false)
+  const [visible, setVisible] = useState(false)
 
-  const [coordX , setCoordX] = useState()
-  const [coordY , setCoordY] = useState()
+  const [coordX, setCoordX] = useState()
+  const [coordY, setCoordY] = useState()
 
-  const handleMove = (e)=> {
-    console.log("RX:" , e.nativeEvent.offsetX)
-    console.log("RY:" , e.nativeEvent.offsetY)
+  const handleMove = (e) => {
+    // console.log("X:", e.pageX)
+    // console.log("Y:", e.pageY)
+
+    console.log("RX:", e.nativeEvent.offsetX)
+    console.log("RY:", e.nativeEvent.offsetY)
 
     setCoordX(e.pageX)
     setCoordY(e.pageY)
@@ -25,15 +26,12 @@ const MouseEvent = () => {
         className="bg-success text-light w-50 p-4"
         onMouseEnter={() => setVisible(true)}
         onMouseLeave={() => setVisible(false)}
-        >
-
+      >
         todo item 1
-
-        {/* koşullu oluşturma(conditional Rendering) */}
-        {visible && <div> Hint </div> }
       </div>
 
-      
+      {/* Conditional Rendering */}
+      {visible && <div>Hint</div>}
 
       <div id="todo-2" className="bg-success text-light w-50 p-4 mt-4">
         todo item 2
@@ -48,7 +46,7 @@ const MouseEvent = () => {
       </div>
 
       <p>
-        X:{coordX} and Y:{coordY}
+        X: {coordX} and Y:{coordY}
       </p>
     </div>
   )
