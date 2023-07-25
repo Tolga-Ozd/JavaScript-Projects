@@ -1,7 +1,7 @@
 import axios from "axios"
 import { useState } from "react"
 
-const AddTutorial = () => {
+const AddTutorial = ({getTutorial}) => {
   const [title, setTitle] = useState("")
   const [description, setDescription] = useState("")
 
