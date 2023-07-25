@@ -1,7 +1,7 @@
 import axios from "axios"
 import { useState } from "react"
 
-const AddTutorial = ({getTutorial}) => {
+const AddTutorial = ({getTutorials}) => {
   const [title, setTitle] = useState("")
   const [description, setDescription] = useState("")
 
@@ -25,7 +25,7 @@ const AddTutorial = ({getTutorial}) => {
     }
 
     // tüm tutorialları iste ve state i gncelle!
-    getTutorial()
+    getTutorials()
   }
 
   return (
