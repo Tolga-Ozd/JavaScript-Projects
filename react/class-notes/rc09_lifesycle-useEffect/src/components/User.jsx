@@ -24,7 +24,7 @@ const User = () => {
         //! ComponentWillUnMount
         return () => {
           clearInterval(timer)
-        }
+        } 
       }, [])
 
   return (
