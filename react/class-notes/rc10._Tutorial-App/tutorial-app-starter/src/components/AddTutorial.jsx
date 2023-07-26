@@ -1,30 +1,29 @@
-import axios from "axios"
 import { useState } from "react"
+import axios from "axios"
 
-const AddTutorial = ({getTutorials}) => {
+const AddTutorial = ({ getTutorials }) => {
   const [title, setTitle] = useState("")
   const [description, setDescription] = useState("")
 
   const handleSubmit = (e) => {
-      e.preventDefault()
-      const newTutor = {title :title , description:description}
-      console.log(newTutor)
-      postTutorial(newTutor)
-      setTitle("")
-      setDescription("")
-  }  
+    e.preventDefault()
+    const newTutor = { title: title, description: description }
+    console.log(newTutor)
+    postTutorial(newTutor)
+    setTitle("")
+    setDescription("")
+  }
 
-  const postTutorial = async(newTutor) => {
+  const postTutorial = async (newTutor) => {
     const BASE_URL = "https://tutorial-api.fullstack.clarusway.com/tutorials/"
-
     try {
-      const res =await axios.post(BASE_URL, newTutor)
+      const res = await axios.post(BASE_URL, newTutor)
       console.log(res)
     } catch (error) {
       console.log(error)
     }
 
-    // tüm tutorialları iste ve state i gncelle!
+    //? Tum tutorial'lari iste ve state'i guncelle
     getTutorials()
   }
 

@@ -1,8 +1,13 @@
 import { FaEdit } from "react-icons/fa"
 import { AiFillDelete } from "react-icons/ai"
 import axios from "axios"
+import EditTutorial from "./EditTutorial"
+import { useState } from "react"
 
-const TutorialList = ({tutorials , getTutorials}) => {
+const TutorialList = ({ tutorials, getTutorials }) => {
+  const [editItem, setEditItem] = useState("")
+
+  console.log(editItem)
   // const tutorials = [
   //   {
   //     id: 1,
@@ -14,17 +19,30 @@ const TutorialList = ({tutorials , getTutorials}) => {
   //     title: "React",
   //     description: "JS library for UI design",
   //   },
+  //   {
+  //     id: 3,
+  //     title: "VUE",
+  //     description: "JS library for UI design",
+  //   },
   // ]
+  const BASE_URL = "https://tutorial-api.fullstack.clarusway.com/tutorials"
 
-  const handleDelete = async(id) =>{
-     const BASE_URL = "https://tutorial-api.fullstack.clarusway.com/tutorials/"
-
-     try {
+  const handleDelete = async (id) => {
+    try {
       await axios.delete(`${BASE_URL}/${id}/`)
-     } catch (error) {
+    } catch (error) {
       console.log(error)
-     }
-     getTutorials()
+    }
+    getTutorials()
+  }
+
+  const editTutor = async (tutor) => {
+    try {
+      await axios.put(`${BASE_URL}/${tutor.id}/`, tutor)
+    } catch (error) {
+      console.log(error)
+    }
+    getTutorials()
   }
 
   return (
@@ -53,6 +71,17 @@ const TutorialList = ({tutorials , getTutorials}) => {
                     size={20}
                     type="button"
                     className="me-2 text-warning"
+                    data-bs-toggle="modal"
+                    data-bs-target="#open-modal"
+                    // onClick={() =>
+                    //   editTutor({
+                    //     id: 1934,
+                    //     title: "REACT",
+                    //     description: "JS Library",
+                    //   })
+                    // }
+
+                    onClick={() => setEditItem(item)}
                   />
                   <AiFillDelete
                     size={22}
@@ -66,6 +95,8 @@ const TutorialList = ({tutorials , getTutorials}) => {
           })}
         </tbody>
       </table>
+
+      <EditTutorial editItem={editItem} />
     </div>
   )
 }
