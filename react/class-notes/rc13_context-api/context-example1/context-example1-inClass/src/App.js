@@ -7,11 +7,14 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import PersonDetail from "./pages/PersonDetail";
 import Login from "./pages/Login";
 import { LoginContext } from "./context/LoginContext";
+import { useState } from "react";
 
 function App() {
+  // local state
   const [user, setUser] = useState({ email: "", password: "" });
 
   return (
+    // global alana state i gönderdik
     <LoginContext.Provider value={{ user ,setUser }}>
     <BrowserRouter>
       <Navs />

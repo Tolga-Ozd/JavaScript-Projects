@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext } from "react";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 const Login = () => {
  
-//! consuming of login context
+//! consuming of login context(login contexti kullanma) 
 const [user, setUser]  = useContext(LoginContext)
 
 const navigate = useNavigate()
@@ -15,7 +15,7 @@ const navigate = useNavigate()
   const handleSubmit = (e) => {
     e.preventDefault();
     navigate("/")
-    setUser({ email: "", password: "" })
+    // setUser({ email: "", password: "" })
   };
 
   return (
