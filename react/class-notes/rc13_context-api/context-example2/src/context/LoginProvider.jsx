@@ -1,31 +1,26 @@
-import { useContext } from "react"
-import { createContext , useState } from "react"
+import { createContext, useState, useContext } from "react"
 
 //! 1- Login Context'i olusuturuldu
 const LoginContext = createContext()
 
-//! 2-sarmallayıcı (provider) oluşturduk
-const LoginProvider = ({children}) => {
-
-// Local State
+//! 2-Sarmalayici (Provider) Component
+const LoginProvider = ({ children }) => {
+  // //! Local State
   const [user, setUser] = useState({ email: "", password: "" })
 
-  const values = { 
-    user , 
-    setUser
+  const values = {
+    user,
+    setUser,
   }
 
   return (
-    <LoginContext.Provider value={ values} > {children} </LoginContext.Provider>
+    <LoginContext.Provider value={values}>{children}</LoginContext.Provider>
   )
 }
 
-//! 3-Consuming custom hook oluşturma
-
-export const useLoginContext =()=>{
-    return useContext(LoginContext)
+//! 3- consuming custom hook
+export const useLoginContext = () => {
+  return useContext(LoginContext)
 }
 
-
 export default LoginProvider
- 
