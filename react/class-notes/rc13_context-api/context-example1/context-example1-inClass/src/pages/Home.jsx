@@ -1,4 +1,4 @@
-import Courses from "../components/Courses";
+ import Courses from "../components/Courses";
 
 const Home = () => {
   return <Courses />;

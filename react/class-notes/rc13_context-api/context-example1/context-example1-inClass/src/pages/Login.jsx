@@ -1,22 +1,24 @@
-import { useContext } from "react";
-import Container from "react-bootstrap/Container";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
-import { LoginContext } from "../context/LoginContext";
-import { useNavigate } from "react-router-dom";
+import { useContext } from "react"
+import Container from "react-bootstrap/Container"
+import Button from "react-bootstrap/Button"
+import Form from "react-bootstrap/Form"
+import { LoginContext } from "../context/LoginContext"
+import { useNavigate } from "react-router-dom"
 
 const Login = () => {
- 
-//! consuming of login context(login contexti kullanma) 
-const [user, setUser]  = useContext(LoginContext)
+  // //! Local State
+  // const [user, setUser] = useState({ email: "", password: "" })
 
-const navigate = useNavigate()
+  //? Consuming of login context
+  const { user, setUser } = useContext(LoginContext)
+
+  const navigate = useNavigate()
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    navigate("/")
+    e.preventDefault()
+    navigate(-1)
     // setUser({ email: "", password: "" })
-  };
+  }
 
   return (
     <Container>
@@ -41,6 +43,7 @@ const navigate = useNavigate()
             placeholder="Enter your password"
             name="password"
             value={user?.password}
+            required
             onChange={(e) => setUser({ ...user, password: e.target.value })}
           />
         </Form.Group>
@@ -51,7 +54,7 @@ const navigate = useNavigate()
         </Container>
       </Form>
     </Container>
-  );
-};
+  )
+}
 
-export default Login;
+export default Login
