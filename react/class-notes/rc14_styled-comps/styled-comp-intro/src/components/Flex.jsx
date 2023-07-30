@@ -8,7 +8,7 @@ align-items: center;
 gap: 1rem;
 max-width: 1000px;
 margin: auto;
-background-color: ${({bg})=> bg || "transparent"} ;
+background-color: ${({bg})=> bg ?? "transparent"} ;
 `
 
 export default Flex;

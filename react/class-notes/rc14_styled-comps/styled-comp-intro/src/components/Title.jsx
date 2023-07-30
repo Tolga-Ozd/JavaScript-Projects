@@ -1,9 +1,10 @@
-// import styled from 'styled-components';
+// esch1 => kısayol
 
-// const Title = styled.h1`
-// color:
-// background-color:
-// `;
+import styled from 'styled-components';
 
-// export default H1;
-// /*  */
+const Title = styled.h1`
+color: ${({renk})=> renk || "black"};
+background-color: ${({bgRenk}) => bgRenk || "transparent"};
+`;
+
+export default Title;
