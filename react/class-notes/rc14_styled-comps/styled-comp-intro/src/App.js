@@ -1,17 +1,15 @@
 
-import { Button } from "./components/Buton.styled";
+import { Button, DarkButton } from "./components/Buton.styled";
+import Flex from "./components/Flex";
 
 const App = () => {
   return (
     <>
-     
-
-       <h1>Styled Components</h1>
-
-      <Button>Tıkla</Button>
-
-      <Button>Send</Button>
-      
+      <Flex bg="purple">
+          <h1>Styled Components</h1>
+          <Button>Tıkla</Button>
+          <DarkButton>Send</DarkButton>
+      </Flex>
     </>
   );
 };
