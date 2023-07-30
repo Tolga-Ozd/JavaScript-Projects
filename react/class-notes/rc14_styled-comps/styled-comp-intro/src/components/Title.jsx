@@ -1,10 +1,8 @@
-// esch1 => kısayol
-
-import styled from 'styled-components';
+import styled from "styled-components"
 
 const Title = styled.h1`
-color: ${({renk})=> renk || "black"};
-background-color: ${({bgRenk}) => bgRenk || "transparent"};
-`;
+  color: ${({ renk }) => renk || "black"};
+  background-color: ${({ bgRenk }) => bgRenk || "transparent"};
+`
 
-export default Title;
+export default Title
