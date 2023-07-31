@@ -8,9 +8,11 @@ export const NavStyled = styled.nav`
   align-items: center;
   
 
-  @media(max-width:700px){
+  @media(max-width:${({theme})=>theme.breakpoints.md}){
     flex-direction: column;
   }
-`;
+
+  background-color: ${({theme}) =>theme.colors.primary};
+`
 
 export default NavStyled;

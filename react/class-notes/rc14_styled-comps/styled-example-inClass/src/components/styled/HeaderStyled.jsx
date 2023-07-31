@@ -5,7 +5,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 gap: 1rem;
-@media(max-width:700px){
+@media(max-width:${({theme})=>theme.breakpoints.md}) {
     flex-direction: column;
   }
 
