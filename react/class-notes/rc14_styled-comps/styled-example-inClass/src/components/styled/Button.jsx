@@ -14,6 +14,10 @@ const Button = styled.button`
     opacity: 0.9;
     transform: scale(0.97);
     cursor: pointer;
+/* 
+ @media(max-width:404px) {
+    margin: auto;
+ } */
   }
 `
 
