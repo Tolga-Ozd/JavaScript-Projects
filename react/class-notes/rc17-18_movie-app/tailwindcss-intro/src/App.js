@@ -11,7 +11,7 @@ function App() {
             alt="sa"
             className="rounded-xl h-[200px] animate-pulse"
           />
-          <p className="line-clamp-1 hover:line-clamp-none">
+          <p className="line-clamp-1 hover:line-clamp-none"> 
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Repellendus, fugiat? Eos, temporibus enim animi dolorem laudantium
             aliquid delectus accusantium ratione, odio maiores excepturi
