@@ -6,7 +6,7 @@ const Nav = () => {
    <NavStyled>
 
       <div>
-        <img src="./images/logo.png" width="150px" alt="logo" />
+        <img src="./images/logo.png" width="250px" alt="logo" />
       </div>
 
       <div>
