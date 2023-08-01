@@ -6,9 +6,14 @@ import Navbar from "./components/Navbar";
 const App = () => {
   return (
     <div className="gray-dark-main min-h-screen">
-      {/* <AppRouter /> */}
-      <Navbar />
-      <Register />
+
+<AuthContextProvider>
+
+<AppRouter />
+  
+</AuthContextProvider>
+      
+      
     </div>
   );
 };
