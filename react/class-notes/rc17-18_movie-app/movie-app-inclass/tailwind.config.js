@@ -1,6 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
+
+  //? kendi theme ayarlarımızı eklemek için bu kısmı ekliyoruz
   theme: {
     extend: {
       colors: {
@@ -12,6 +14,8 @@ module.exports = {
     },
   },
   plugins: [],
+//Js nin interaktif (açılır kapanır pencere gibi) yapılarını kullanacaksak burayı kullanırız
+
   darkMode: "class",
 };
 
