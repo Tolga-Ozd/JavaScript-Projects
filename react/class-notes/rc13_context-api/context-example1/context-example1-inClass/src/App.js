@@ -16,8 +16,6 @@ import Register from "./pages/Register"
 function App() {
   // //! Local State
   
-
-
   return (
  <FireBaseProvider >
 
