@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom"
 import { useContext } from "react"
 import { FirebaseContext } from "../context/FireBaseContext"
 
-const Login = () => {
+const Register = () => {
   const navigate = useNavigate()
 
   const { setCurrentUser } = useContext(FirebaseContext)
@@ -27,17 +27,33 @@ const Login = () => {
 
   return (
     <Container>
-      <h1 className="text-center mt-4">LOGIN PAGE</h1>
+      <h1 className="text-center mt-4">REGISTER PAGE</h1>
       <Form onSubmit={(e) => handleSubmit(e)}>
+      <Form.Group className="mb-3" controlId="Name" >
+          <Form.Label>Name</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Enter your name"
+            name="name"
+            required/>
+
+        </Form.Group><Form.Group className="mb-3" controlId="surname" >
+          <Form.Label>Surname</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Enter your surname"
+            name="surname"
+            required/>
+
+        </Form.Group>
         <Form.Group className="mb-3" controlId="pasword" >
           <Form.Label>Email</Form.Label>
           <Form.Control
             type="email"
             placeholder="Enter your email"
             name="email"
-            required
+            required/>
 
-          />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="password">
@@ -46,9 +62,7 @@ const Login = () => {
             type="password"
             placeholder="Enter your password"
             name="password"
-            required
-
-          />
+            required/>
         </Form.Group>
         <Container className="text-center">
           <Button variant="danger" type="submit">
@@ -60,4 +74,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default Register

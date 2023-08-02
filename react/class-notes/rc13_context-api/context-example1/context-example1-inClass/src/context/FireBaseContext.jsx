@@ -1,16 +1,19 @@
-import React from 'react'
-import { createContext } from 'react'
+import React, { createContext, useState } from 'react'
 
-const FireBaseContext = createContext()
-
+export const FirebaseContext =  createContext()
 
 
 const FireBaseProvider = ({children}) => {
 
+  const [currentUser, setCurrentUser] = useState(false)
+  
+    
+
+
 
 
   return (
-    <FireBaseContext.Provider value={null}>{children}</FireBaseContext.Provider>
+    <FirebaseContext.Provider value={{currentUser,setCurrentUser}}>{children}</FirebaseContext.Provider>
   )
 }
 

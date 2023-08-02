@@ -4,11 +4,13 @@ import Nav from "react-bootstrap/Nav"
 import Navbar from "react-bootstrap/Navbar"
 import Image from "react-bootstrap/Image"
 import { useContext } from "react"
-import { LoginContext } from "../context/LoginContext"
+import { FirebaseContext } from "../context/FireBaseContext"
+
 
 function Navs() {
   // ! Consuming login context
-  const { user, setUser } = useContext(LoginContext)
+
+  const { currentUser } = useContext(FirebaseContext)
 
   return (
     <Navbar expand="sm">
@@ -28,26 +30,20 @@ function Navs() {
             <Link className="nav-link" to="/">
               Home
             </Link>
-            <Link className="nav-link" to="/about">
+            <Link className={`nav-link  `}  to="/about">
               About
             </Link>
             <Link className="nav-link" to="/people">
               People
             </Link>
-
-            {user.email && user.password ? (
-              <Link
-                className="nav-link"
-                to="/login"
-                onClick={() => setUser({ email: "", password: "" })}
-              >
-                Logout
-              </Link>
-            ) : (
-              <Link className="nav-link" to="/login">
-                Login
-              </Link>
-            )}
+            {
+              currentUser
+                ? <Link className="nav-link" to="/login" > Logout </Link>
+                : <>
+                  <Link className="nav-link" to="/login"> Login </Link>
+                  <Link className="nav-link" to="/register" > Register </Link>
+                </>
+            }
           </Nav>
         </Navbar.Collapse>
       </Container>
