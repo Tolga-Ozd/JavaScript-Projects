@@ -13,15 +13,6 @@ const FireBaseProvider = ({children}) => {
 const createUser = async(email, password) =>{
 
 
-const userCredential = await  createUserWithEmailAndPassword(auth, currentUser.email, currentUser.password)
-  .then((userCredential) => {
-    // Signed in
-    const user = userCredential.user;
-  })
-  .catch((error) => {
-    console.log(error);
-  });
-}
 
 
 
