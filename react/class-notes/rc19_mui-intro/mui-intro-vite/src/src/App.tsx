@@ -1,4 +1,5 @@
 import Typo from "./components/Typo"
+import TextFieldComp from "./components/TextFieldComp"
 
 function App() {
   
@@ -6,6 +7,7 @@ function App() {
   return (
     <>
       <Typo />
+      <TextFieldComp />
     </>
   )
 }

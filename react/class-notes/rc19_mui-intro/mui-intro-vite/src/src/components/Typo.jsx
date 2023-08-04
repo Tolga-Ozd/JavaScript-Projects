@@ -1,6 +1,6 @@
 import Typography from "@mui/material/Typography" ;
 import Box from "@mui/material/Box"
-import { Container } from "@mui/material";
+import { Button, Container, Stack } from "@mui/material";
 
 const Typo = () => {
   return (
@@ -21,6 +21,21 @@ const Typo = () => {
         <Typography variant="body2"  sx= {{color: "blue" , backgroundColor :"red" , mt:"1rem"}} align="center">Button Text </Typography >
 
     </Box>
+
+    <Stack direction={"row"} spacing={2}>
+        <Button variant = "outlined" color="success">
+            Click
+        </Button>
+
+        <Button variant = "contained">
+            Click
+        </Button>
+        <Button variant = "contained" sx={{color:"warning.light" ,backgroundColor:"error.dark"}}>
+            Click
+        </Button>
+
+
+    </Stack>
 
     </Container>
    
