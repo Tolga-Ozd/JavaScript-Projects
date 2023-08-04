@@ -1,5 +1,6 @@
 import Typo from "./components/Typo"
 import TextFieldComp from "./components/TextFieldComp"
+import CardComp from "./components/CardComp"
 
 function App() {
   
@@ -8,6 +9,7 @@ function App() {
     <>
       <Typo />
       <TextFieldComp />
+      <CardComp />
     </>
   )
 }
