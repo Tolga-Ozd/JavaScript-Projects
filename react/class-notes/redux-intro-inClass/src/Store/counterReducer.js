@@ -1,5 +1,13 @@
-//Bu syfada statelerin başlangıç durumlarının belirlenmesi.
+export const INC = "INC"
+export const DEC = 'DEC'
+export const CLR = 'CLR'
 
+export const increment = (payload) => {
+    return {type:INC , payload}
+}
+
+//Bu 
+export const CLR = 'CLR'syfada statelerin başlangıç durumlarının belirlenmesi.
 const initialState = {
     count:10,
 }
@@ -7,13 +15,13 @@ const initialState = {
 // ! burası Pure Reducer Function:
 export const counterReducer = (state=initialState, action) => {
     switch (action.type) {
-        case "INC":
+        case INC:
             return{count: state.count + 1}
     
-        case "DEC":  
+        case DEC:  
             return{count: state.count - 1}
 
-        case "CLR":    
+        case CLR:    
             return{count: 0}
 
         default:
