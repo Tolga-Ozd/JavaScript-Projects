@@ -6,8 +6,8 @@ export const increment = (payload) => {
     return {type:INC , payload}
 }
 
-//Bu 
-export const CLR = 'CLR'syfada statelerin başlangıç durumlarının belirlenmesi.
+//Statelerin başlangıç durumlarının belirlenmesi.
+export const CLR = 'CLR'
 const initialState = {
     count:10,
 }
