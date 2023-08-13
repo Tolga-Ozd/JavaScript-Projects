@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux"
 import "./Counter.css"
+import { clear, decrement, increment } from "../../Store/counterReducer"
 
 const Counter = () => {
 // !global statein tüketilmesi
@@ -14,13 +15,24 @@ const Counter = () => {
       <h1>counter:{count}</h1>
       <div>
         <button className="counter-button positive"
-         onClick={()=>dispatch({type: "INC"})}>increase</button>
+        //  onClick={()=>dispatch({type: "INC"})}
+         onClick={()=>dispatch(increment())}
+         >
+          increase
+          </button>
+         
 
         <button className="counter-button zero"
-        onClick={()=>dispatch({type: "CLR"})}>reset</button>
+        // onClick={()=>dispatch({type: "CLR"})}
+        onClick={()=>dispatch(clear())}
+        >
+          reset</button>
 
         <button className="counter-button negative"
-        onClick={()=>dispatch({type: "DEC"})}>decrease</button>
+        // onClick={()=>dispatch({type: "DEC"})}
+        onClick={()=>dispatch(decrement())}
+        >
+          decrease</button>
       </div>
     </div>
   )
