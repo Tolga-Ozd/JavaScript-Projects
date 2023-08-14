@@ -5,6 +5,7 @@ const TodoInput = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    
     setText("")
   }
 

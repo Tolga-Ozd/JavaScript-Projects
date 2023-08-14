@@ -8,12 +8,15 @@ export const CLEAR_TODO = "CLEAR_TODO"
 
 
 //action function declaration
-export  const addTodo = (payload) = ({type: ADD_TODO , payload })
+export  const addTodo = (payload) => ({type: ADD_TODO , payload })
+export  const clearTodo = () => ({type: CLEAR_TODO })
+
 
 //?başlangıç durumları
+
 const initialState = {
-    todoList: [{id: new Date() , text: "work redux" , completed: false} ,
-    {},
+    todoList: [{id: new Date() , text: "work redux" , completed: true} ,
+,
   ],
 }
 
@@ -27,6 +30,9 @@ export const todoReducer= (state = initialState, { type, payload }) => {
       ],
     }
 
+    case CLEAR_TODO:
+      return initialState
+      
   default:
     return state
   }

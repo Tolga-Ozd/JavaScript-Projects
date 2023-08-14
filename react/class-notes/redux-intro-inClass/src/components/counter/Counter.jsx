@@ -4,7 +4,11 @@ import { clear, decrement, increment } from "../../Store/counterReducer"
 
 const Counter = () => {
 // !global statein tüketilmesi
-  const count = useSelector((state) =>state.count)
+  const counter = useSelector((state) =>state.count)
+
+//!Root reducer sonrası consuming
+  const count = useSelector((state) =>state.counter.count )
+  
 
 //! useDispatch  custom redux hookudur.
   const dispatch = useDispatch()
